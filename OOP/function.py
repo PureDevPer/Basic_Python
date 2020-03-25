@@ -39,4 +39,4 @@ def sum_and_mul(a, b):
 
 print(sum_and_mul(3, 4))  # (7, 12)
 sum, mul = sum_and_mul(3, 4)
-print(sum, mul)
+print(sum, mul)  # 7 12
