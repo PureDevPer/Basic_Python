@@ -1,21 +1,22 @@
 class Service:
-    secrect = "THIS IS AN INSTANCE"
+    secrect = "SECRET"
 
     def sum(self, a, b):
         result = a + b
         print("%s + %s = %s" % (a, b, result))
 
 
+# Pay is an INSTANCE, which is made by class
 pay = Service()
 print(pay.secrect)
-# THIS IS AN INSTANCE
+# SECRET
 print(pay.sum(1, 1))
 # 1 + 1 = 2
 # None
 
 
 class Service2:
-    secrect = "THIS IS AN INSTANCE"
+    secrect = "SECRET"
 
     def setname(self, name):
         self.name = name
@@ -34,7 +35,7 @@ print(pay2.sum(1, 1))
 
 
 class Service3:
-    secrect = "THIS IS AN INSTANCE"
+    secrect = "SECRET"
 
     def __init__(self, name):
         self.name = name
