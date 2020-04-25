@@ -29,4 +29,4 @@ class HousePark(HouseKim):
 
 
 julliet = HousePark("Julliet")
-julliet.travel("Dokdo", 3)
+julliet.travel("Dokdo", 3)  # Julliet PARK  goes to  Dokdo  on 3
