@@ -69,3 +69,13 @@ print(a.split(":"))  # ['a', 'b', 'c', 'd']
 
 a = "Hi man"
 print(a.swapcase())  # hI MAN
+
+
+def say_hello(name, age):
+    return f"Hello {name} you are {age} years old"
+
+
+hello = say_hello("wooseok", "20")
+print(hello)
+hi = say_hello(age="10", name="Tiff")
+print(hi)
