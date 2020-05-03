@@ -13,6 +13,17 @@ def get_last_page():
     return int(last_page)
 
 
+def extract_job(html):
+    title = html.find("div", {"class": "fl1"}).find("h2").find("a")["title"]
+    company = html.find("div", {"class": "fl1"}).find_all("span")
+    # location = company[-1].string.strip() if company[-1].string is not None else " "
+    # companyName = company[0].string.strip() if company[0].string is not None else " "
+    # print(f"{companyName} / {location}")
+    print(
+        f"{company[0].get_text(strip=True)} / {company[-1].get_text(strip=True)}")
+    return {'title': title}
+
+
 def extract_jobs(last_page):
     jobs = []
     for page in range(last_page):
@@ -20,7 +31,9 @@ def extract_jobs(last_page):
         soup = BeautifulSoup(result.text, "html.parser")
         results = soup.find_all("div", {"class": "-job"})
         for result in results:
-            print(result["data-jobid"])
+            job = extract_job(result)
+            jobs.append(job)
+    return jobs
 
 
 def get_jobs():
