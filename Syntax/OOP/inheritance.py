@@ -28,4 +28,4 @@ benz = Convertible(color="green", price="$40")
 print(benz.take_off())  # taking off
 print(benz.wheels)  # 4
 print(benz)  # Car with no roof
-print(benz.color)
+print(benz.color)  # green
